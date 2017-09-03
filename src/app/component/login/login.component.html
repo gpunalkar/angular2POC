@@ -1,3 +1,14 @@
-<p>
-  login works!
-</p>
+<form ng-submit="validateCredentials()" class="form" novalidate>
+    <div class="form-group">
+      <input type="text" class="form-control" ng-model="username" placeholder="username" required/>
+    </div> 
+
+    <div class="form-group">
+      <input type="password" class="form-control" ng-model="password" placeholder="password" required/>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-success">Login</button>
+      <span class="text-danger">{{ isadmin }}</span>
+    </div>
+</form>
